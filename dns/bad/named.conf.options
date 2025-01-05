@@ -1,0 +1,7 @@
+options {
+        directory "/var/cache/bind";
+	recursion yes;
+        dnssec-validation no;
+        allow-query { any; };
+        allow-recursion { localhost; 192.168.57.0/24; };
+};
