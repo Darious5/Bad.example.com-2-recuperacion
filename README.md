@@ -55,6 +55,9 @@ The first line is to specify that that machine has to act like the slave machine
 ### named.conf.options
 Here i just mirrored the configuration that i had in the bad machine, is ussually good practice to mirror the configuration from machine to machine to be consistent with the security that was applied to the first one.
 
+### vagrantfile
+We added the files that we needed for the configuration.
+
 ## Lets see if it works
 ### bad machine
 ### bind9 status

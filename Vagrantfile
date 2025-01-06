@@ -37,6 +37,7 @@ Vagrant.configure("2") do |config|
 
     worst.vm.provision "worst", type:"shell", inline: <<-SHELL
       cp -v /vagrant/dns/worst/named* /etc/bind/
+      cp -v /vagrant/dns/bad/*.dns /var/lib/bind/
       systemctl restart bind9
     SHELL
   end 

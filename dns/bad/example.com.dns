@@ -4,8 +4,8 @@ $TTL 86400
          604800        ; Refresh
             300        ; Retry
         2419200        ; Expire
-           86400 )     ; Negative Cache TTL
-;
+           86400       ; Negative Cache TTL
+)
 $ORIGIN example.com.
 @     IN  NS      bad.example.com.
 @     IN  NS      worst.example.com.
@@ -13,5 +13,3 @@ bad   IN  A       192.168.57.2
 worst IN  A       192.168.57.3
 www    IN  CNAME   worst.example.com.
 @      IN  MX  90  worst.example.com.
-
-
