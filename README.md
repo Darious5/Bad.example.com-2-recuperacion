@@ -19,6 +19,9 @@
 
 ## Changes to bad
 
+### named
+Changed `RESOLVCONF=no` to `RESOLVCONF=yes`
+
 ### named.conf.options
 We have to allow recursion by changing `recursion no;` to `recursion yes;`, this is because if not, recursive queries would be acepted.
 We should also change `dnssec-validation yes;` to `dnssec-validation no;` because it is not configured.
@@ -48,15 +51,15 @@ In order to do that we just add `@   IN  NS  worst.example.com.` to it.
 
 ## Changes to worst
 
+### named
+Changed `RESOLVCONF=no` to `RESOLVCONF=yes`
+
 ### named.conf.local
 We added to both the regular zone and the inverse zone the lines `type slave;` and `masters { 192.168.57.2; };`.
 The first line is to specify that that machine has to act like the slave machine, the other line is to specify that the masters machine ip is 192.168.57.2.
 
 ### named.conf.options
 Here i just mirrored the configuration that i had in the bad machine, is ussually good practice to mirror the configuration from machine to machine to be consistent with the security that was applied to the first one.
-
-### vagrantfile
-We added the files that we needed for the configuration.
 
 ## Lets see if it works
 ### bad machine
